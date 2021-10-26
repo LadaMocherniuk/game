@@ -38,19 +38,17 @@ clickHandler = e => {
     
 }
  isWinner = () => {
-    let win = (this.state.step % 2 === 0 )? 'X' : 'O';
     for ( let i = 0; i < this.combination.length; i++){
-        let line = this.combination[i];
-        if(this.state.areas[line[0]] === win && 
-            this.state.areas[line[1]] === win &&
-            this.state.areas[line[2]] === win ){
-                alert(win + '  player win 🏆');
+      const [a, b, c ] = this.combination[i];
+        if(this.state.areas[a] && this.state.areas[a] === this.state.areas[b]
+             && this.state.areas[a] === this.state.areas[c]){
+                alert('  player win 🏆');
             setTimeout(() =>{
                 this.setState({areas: Array(9).fill(null)});
                 this.setState({step: 0});
-            }, 4000);
+            }, 3000);
+        
         }
-
     }
 
 }

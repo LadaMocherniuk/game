@@ -6,7 +6,7 @@ import Modal from './Modal.js';
 
 ReactDOM.render(
     <Fragment >
-    <Modal/>
+    
     <App/>
     </Fragment>
     ,document.getElementById('root'));

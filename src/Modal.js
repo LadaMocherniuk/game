@@ -9,26 +9,29 @@ const Choosen = {
   };
 
 class Modal extends React.Component{
-
     state = {
-        checked: null,
+    checked: null,
+    isOpen: true,
     }
 
     handleChange = ({ target }) => {
-
         const { name, value, type, checked } = target;
-       this.setState({ [name]: type === 'checkbox' ? checked : value })
-      };
+        this.setState({ [name]: type === 'checkbox' ? checked : value })
+    };
 
-      handleSubmit = evt => {
+    handleSubmit = evt => {
         evt.preventDefault();
-
         this.props.onSubmit(this.state.checked);
-      };
+        this.setState({isOpen: false});
+    };
+
+   
     
-    render() {
-        return (
-          <form className="modal">
+render(){
+    const {isOpen} = this.state;
+
+    return (
+        <form className="modal" isOpen={true}>
               <h2>Choose player</h2>
             <label>
             PLAYER1
@@ -48,7 +51,7 @@ class Modal extends React.Component{
               onChange={this.handleChange}
             />
         </label>
-        <button type="submit" >Enter</button>
+        <button type="submit">Enter</button>
           </form>
         );
       }
