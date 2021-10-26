@@ -7,7 +7,8 @@
     
 }
 .grid{
-    font-family: "Monaco", cursive;
+    font-family: normal;
+    color: lightgoldenrodyellow;
     width: 100px;
     height: 100px;
     box-shadow: 0 0 0 1px #333333;
@@ -16,7 +17,7 @@
     line-height: 100px;
     font-size: 60px;
     border-radius: 2mm;
-    background-color: lightcoral;
+    background-color: rgb(117, 84, 155);
     
 }
 .App{
