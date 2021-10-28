@@ -4,7 +4,6 @@
     grid-template-columns: repeat(3, auto);
     width: 306px;
     margin: 50px auto;
-    
 }
 .grid{
     font-family: normal;
@@ -18,7 +17,6 @@
     font-size: 60px;
     border-radius: 2mm;
     background-color: rgb(117, 84, 155);
-    
 }
 .App{
     text-align: center;
